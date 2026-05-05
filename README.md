@@ -21,3 +21,10 @@ python main.py --files stats1.csv stats2.csv --report clickbait
 Зависимость: `tabulate`.
 
 Проверялось на Python 3.10
+
+Проверка тестов:
+
+```bash
+pytest
+```
+Примеры работ в main_py.png и pytest.png
