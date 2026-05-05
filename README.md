@@ -10,21 +10,20 @@ Oтчёт **clickbait**: строки, где CTR выше 15% и удержан
 ```bash
 python main.py --files stats1.csv --report clickbait
 python main.py --files stats1.csv stats2.csv --report clickbait
+pytest
 ```
 
 **Для ревью:**
 
- Новые отчёты добавляются методами в `ReportProcessor` и регистрируются в словаре `reports` — точка расширения без правки общего цикла.
+ Новые отчёты добавляются методами в `ReportProcessor`(workmate/reports.py) и регистрируются в словаре `reports` — точка расширения без правки общего цикла. 
 
 При пустых `--files` / `--report` или нечитаемых файлах скрипт пишет сообщение в stdout и выходит; при отсутствии данных после чтения — отдельная ошибка.
 
-Зависимость: `tabulate`.
+Зависимость: `pytest`, `pytest-cov`, `tabulate`. Проверялось на Python 3.10
 
-Проверялось на Python 3.10
+Примеры работ 
 
-Проверка тестов:
-
-```bash
-pytest
-```
-Примеры работ в main_py.png и pytest.png
+main_py.png 
+![main_py](main_py.png)
+pytest.png
+![pytest](pytest.png)
